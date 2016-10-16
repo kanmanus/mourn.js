@@ -5,33 +5,59 @@ $black: #000;
   display: inline-block;
   position: relative;
   margin: 50px;
-  width: 400px;
-  height: 400px;
+  width: 124px;
+  height: 124px;
   background: #DDD;
+
+  .ribbon-top{
+    position: absolute;
+    top: 9px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 26px;
+    height: 20px;
+    background: $black;
+    border: 2px solid $white;
+  }
 
   .ribbon-wing{
     position: absolute;
-    top: 20px;
-    left: 40px;
-    padding: 2px;
-    background: $white;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 110px;
 
     &.ribbon-left{
-      transform: rotate(-24deg);
+      transform: translate(-50%, -50%) rotate(-24deg);
     }
 
     &.ribbon-right{
-      transform: rotate(24deg);
+      transform: translate(-50%, -50%) rotate(24deg);
     }
 
-    .ribbon-inside{
-      height: 100px;
-      border: 10px solid $black;
-      border-top: 0 solid;
-      border-bottom: 10px solid rgba(0, 0, 0, 0);
+    > div{
+      position: absolute;
       font: normal 100%/normal Arial, Helvetica, sans-serif;
       color: rgba(0,0,0,1);
       text-overflow: clip;
+    }
+
+    .ribbon-outside{
+      top: 0;
+      left: 0;
+      height: 100px;
+      border: 10px solid $white;
+      border-top: 0 solid;
+      border-bottom: 10px solid rgba(0, 0, 0, 0);
+    }
+
+    .ribbon-inside{
+      top: 2px;
+      left: 2px;
+      height: 94px;
+      border: 8px solid $black;
+      border-top: 0 solid;
+      border-bottom: 10px solid rgba(0, 0, 0, 0);
     }
   }
 }
