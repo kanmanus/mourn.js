@@ -56,4 +56,45 @@ $black: #000;
       border-bottom: 10px solid rgba(0, 0, 0, 0);
     }
   }
+
+  &.small{
+    width: 60px;
+    height: 70px;
+
+    .ribbon-top{
+      top: 9px;
+      width: 16px;
+      height: 10px;
+      border: 1px solid $white;
+    }
+
+    .ribbon-wing{
+      margin-left: -1px;
+      width: 10px;
+      height: 55px;
+
+      &.ribbon-left{
+        margin-top: 2px;
+        transform: translate(-50%, -50%) rotate(-30deg);
+      }
+
+      &.ribbon-right{
+        transform: translate(-50%, -50%) rotate(30deg);
+      }
+
+      .ribbon-outside{
+        height: 50px;
+        border-width: 7px;
+        border-color: rgba(255, 255, 255, 0.95);
+        border-top: 0 solid;
+        border-bottom: 5px solid rgba(0, 0, 0, 0);
+      }
+
+      .ribbon-inside{
+        height: 40px;
+        border-width: 5px;
+        border-bottom: 5px solid rgba(0, 0, 0, 0);
+      }
+    }
+  }
 }

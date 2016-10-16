@@ -1,4 +1,4 @@
-(function($) {  	
+(function($) {
     $.mourn = function(options) {
   		var settings = $.extend({
             ribbon: true,
@@ -8,8 +8,8 @@
             grayscale:0.9
       }, options);
 
-      // set gray scale      
-      if(settings.gray){        
+      // set gray scale
+      if(settings.gray){
         grayscale = settings.grayscale*100+'%';
         var styles = {
           'filter' : 'gray',
@@ -26,27 +26,23 @@
           '-webkit-filter': 'initial'
         };
         $('html').css(styles);
-      }      
+      }
       if(settings.ribbon){
-        if(settings.ribbonSize == 'small'){
+        $('body').append(
+          '<div class="mourn-ribbon ' + settings.ribbonSize + '">'
+            + '<div class="ribbon-top"></div>'
 
-        }else if(settings.ribbonSize == 'large'){          
-          $('body').append(
-            '<div class="mourn-ribbon">'
-              + '<div class="ribbon-top"></div>'
-
-              + '<div class="ribbon-wing ribbon-left">'
-                + '<div class="ribbon-outside"></div>'
-                + '<div class="ribbon-inside"></div>'
-              + '</div>'
-
-              + '<div class="ribbon-wing ribbon-right">'
-                + '<div class="ribbon-outside"></div>'
-                + '<div class="ribbon-inside"></div>'
-              + '</div>'
+            + '<div class="ribbon-wing ribbon-left">'
+              + '<div class="ribbon-outside"></div>'
+              + '<div class="ribbon-inside"></div>'
             + '</div>'
-          );
-        }        
+
+            + '<div class="ribbon-wing ribbon-right">'
+              + '<div class="ribbon-outside"></div>'
+              + '<div class="ribbon-inside"></div>'
+            + '</div>'
+          + '</div>'
+        );      
         if(settings.ribbonPosition=='top-right'){
           // setting css
           var styles = {

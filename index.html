@@ -17,11 +17,11 @@
 
 <script>
 	$(function(){
-		$.mourn({gray:true});
+		$.mourn({gray:true, ribbonSize: 'small'});
 		$('#gray-switch').change(function(){
 			if($(this).is(":checked")){
 				//switch is checked
-				$.mourn({gray:true});
+				$.mourn({gray:true,});
 			}else{
 				//switch is unchecked
 				$.mourn({gray:false});
