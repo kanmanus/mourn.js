@@ -1,8 +1,27 @@
 <body>
-	<div style="background:red;color:#fff;padding:20px">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi dolorum optio consectetur esse nesciunt quos nisi odio officiis distinctio atque aspernatur voluptas necessitatibus libero, labore quibusdam. Rem, maxime ea saepe.</div>
+	<link rel="stylesheet" type="text/css" href="mourn-button.css">
+	<div style="background:red;color:#fff;padding:20px">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi dolorum optio consectetur esse nesciunt quos nisi odio officiis distinctio atque aspernatur voluptas necessitatibus libero, labore quibusdam. Rem, maxime ea saepe.
+	</div>
+
+	<!-- Rounded switch -->
+	<label class="switch">
+	  <input type="checkbox" id="gray-switch">
+	  	<div class="slider round"></div>
+	</label>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="mourn.js"></script>
+
 <script>
-	$.mourn({gray:false});
+	$(function(){
+		$('#gray-switch').change(function(){
+			if($(this).is(":checked")){
+				//switch is checked
+				$.mourn({gray:true});
+			}else{
+				//switch is unchecked
+				$.mourn({gray:false});
+			}
+		});
+	});
 </script>
