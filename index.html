@@ -2,43 +2,34 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Mourn.js - A jQuery library for making your web site </title>
-		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
-		<link rel="stylesheet" type="text/css" href="mourn-button.css">
-		<link rel="stylesheet" href="mourn.css">
+		<title>Mourn.js - A jQuery library for making your web site</title>
+		<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">		
+		<link rel="stylesheet" href="mourn.min.css">
+		<link rel="stylesheet" href="custom.css">
+		<link rel="stylesheet" href="cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/default.min.css">		
 	</head>
-	<body>
-
-	</body>
-</html>
 <body>
-
-	<h1>Mourn.js</h1>
-	<div class="switch-container">
-		<div class="title">GRAYSCALE</div>
-		<!-- Rounded switch -->
-		<label class="switch">
-		  <input type="checkbox" checked="checked" id="gray-switch">
-		  	<div class="slider round"></div>
-		</label>
+	<h1>Mourn.js</h1>	
+	<div class="demo">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi dolorum optio consectetur esse nesciunt quos nisi odio officiis distinctio atque aspernatur voluptas necessitatibus libero, labore quibusdam. Rem, maxime ea saepe.
 	</div>
-	<div style="background:red;color:#fff;padding:20px">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi dolorum optio consectetur esse nesciunt quos nisi odio officiis distinctio atque aspernatur voluptas necessitatibus libero, labore quibusdam. Rem, maxime ea saepe.
+	<div class="default">
+		
 	</div>
+	<footer>
+		Copyright (C) 2016 Kanmanus Ongvisatepaiboon, Songklod Saengvoratip, Phruek Kosonsuwiwat
+	</footer>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="mourn.js"></script>
-
 <script>
-	$(function(){
-		$.mourn({gray:true});
-		$('#gray-switch').change(function(){
-			if($(this).is(":checked")){
-				//switch is checked
-				$.mourn({gray:true,});
-			}else{
-				//switch is unchecked
-				$.mourn({gray:false});
-			}
-		});
+	$(function(){		
+		$.mourn({
+			ribbon: true,
+            ribbonSize: 'small', // small|large
+            ribbonPosition: 'top-right', // top-right|top-left|bottom-right|bottom-left
+            gray: true,
+            grayScale:0.9, 
+		});	
 	});
 </script>

@@ -1,16 +1,22 @@
-(function($) {
+function checkGray(){
+   if($('#gray-switch').is(":checked")){
+     $.mourn({gray:true});
+   }else{
+     $.mourn({gray:false});
+   }
+}      
+(function($) {    
     $.mourn = function(options) {
   		var settings = $.extend({
             ribbon: true,
             ribbonSize: 'large',
             ribbonPosition: 'top-right',
             gray: true,
-            grayscale:0.9
-      }, options);
-
+            grayScale:0.9,            
+      }, options);      
       // set gray scale
       if(settings.gray){
-        grayscale = settings.grayscale*100+'%';
+        grayscale = settings.grayScale*100+'%';
         var styles = {
           'filter' : 'gray',
           'filter': 'grayscale('+grayscale+')',
@@ -18,6 +24,17 @@
           '-webkit-filter': 'grayscale('+grayscale+')'
         };
         $('html').css(styles);
+        if($('#gray-switch').size() == 0){
+          $('body').append(
+            '<div class="switch-container">'
+              + '<div class="title">GRAYSCALE</div>'
+              + '<label class="switch">'
+                + '<input type="checkbox" onChange="checkGray()" checked="checked" id="gray-switch">'
+                + '<div class="slider round"></div>'
+              + '</label>'
+            + '</div>'
+          );
+        }        
       }else{
         var styles = {
           'filter' : 'initial',
@@ -28,21 +45,21 @@
         $('html').css(styles);
       }
       if(settings.ribbon){
-        $('body').append(
-          '<div class="mourn-ribbon ' + settings.ribbonSize + '">'
-            + '<div class="ribbon-top"></div>'
-
-            + '<div class="ribbon-wing ribbon-left">'
-              + '<div class="ribbon-outside"></div>'
-              + '<div class="ribbon-inside"></div>'
+        if($('.mourn-ribbon').size() == 0){
+          $('body').append(
+            '<div class="mourn-ribbon ' + settings.ribbonSize + '">'
+              + '<div class="ribbon-top"></div>'
+              + '<div class="ribbon-wing ribbon-left">'
+                + '<div class="ribbon-outside"></div>'
+                + '<div class="ribbon-inside"></div>'
+              + '</div>'
+              + '<div class="ribbon-wing ribbon-right">'
+                + '<div class="ribbon-outside"></div>'
+                + '<div class="ribbon-inside"></div>'
+              + '</div>'
             + '</div>'
-
-            + '<div class="ribbon-wing ribbon-right">'
-              + '<div class="ribbon-outside"></div>'
-              + '<div class="ribbon-inside"></div>'
-            + '</div>'
-          + '</div>'
-        );      
+          );    
+        }  
         if(settings.ribbonPosition=='top-right'){
           // setting css
           var styles = {
