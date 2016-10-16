@@ -2,14 +2,14 @@
   	$.mourn = function(options) {
   		var settings = $.extend({
             ribbon: true,
-            ribbonSize: 'large'
+            ribbonSize: 'large',
             ribbonPosition: 'top-right',
             gray: true,
             grayscale:0.9
       }, options);
 
       // set gray scale
-      if(settings.gray){
+      if(settings.gray){        
         grayscale = settings.grayscale*100+'%';
         var styles = {
           'filter' : 'gray',
