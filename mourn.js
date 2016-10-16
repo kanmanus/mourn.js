@@ -2,7 +2,7 @@
   	$.mourn = function(options) {
   		var settings = $.extend({
             ribbon: true,
-            smallRibbon:true,
+            ribbonSize: 'large'
             ribbonPosition: 'top-right',
             gray: true,
             grayscale:0.9
@@ -29,9 +29,9 @@
       }
 
       if(settings.ribbon){
-        if(settings.smallRibbon){
+        if(settings.ribbonSize == 'small'){
 
-        }else{
+        }else if(settings.ribbonSize == 'large'){
           $('body').append(
             '<div class="mourn-ribbon">'
               + '<div class="ribbon-top"></div>'
