@@ -1,10 +1,11 @@
 <body>
 	<link rel="stylesheet" type="text/css" href="mourn-button.css">
+	<link rel="stylesheet" href="mourn.css">
 	<h1>Mourn.js</h1>
 	<div class="switch-container">
 		<!-- Rounded switch -->
 		<label class="switch">
-		  <input type="checkbox" id="gray-switch">
+		  <input type="checkbox" checked="checked" id="gray-switch">
 		  	<div class="slider round"></div>
 		</label>
 	</div>
@@ -16,6 +17,7 @@
 
 <script>
 	$(function(){
+		$.mourn({gray:true});
 		$('#gray-switch').change(function(){
 			if($(this).is(":checked")){
 				//switch is checked

@@ -1,5 +1,5 @@
-(function($) {
-  	$.mourn = function(options) {
+(function($) {  	
+    $.mourn = function(options) {
   		var settings = $.extend({
             ribbon: true,
             ribbonSize: 'large',
@@ -8,7 +8,7 @@
             grayscale:0.9
       }, options);
 
-      // set gray scale
+      // set gray scale      
       if(settings.gray){        
         grayscale = settings.grayscale*100+'%';
         var styles = {
@@ -26,12 +26,11 @@
           '-webkit-filter': 'initial'
         };
         $('html').css(styles);
-      }
-
+      }      
       if(settings.ribbon){
         if(settings.ribbonSize == 'small'){
 
-        }else if(settings.ribbonSize == 'large'){
+        }else if(settings.ribbonSize == 'large'){          
           $('body').append(
             '<div class="mourn-ribbon">'
               + '<div class="ribbon-top"></div>'
