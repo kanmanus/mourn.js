@@ -38,7 +38,7 @@ First, add a link to the css file in your ```<head>```:
 Then, before your closing ```<body>``` tag add:
 ```html
 <!-- jQuery library (served from Google) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <!-- Mourn.js Javascript file -->
 <script type="text/javascript" src="src/js/mourn.js"></script>
 ```
