@@ -1,10 +1,10 @@
-(function($) {
+(($ => {
     // Declare variables
-    var switchSlider = $('#gray-switch');
+    const switchSlider = $('#gray-switch');
 
     // Mourn.js
-    $.mourn = function(options) {
-  		var settings = $.extend({
+    $.mourn = options => {
+  		const settings = $.extend({
             ribbon: true,
             ribbonSize: 'large',
             ribbonPosition: 'bottom-left',
@@ -14,13 +14,13 @@
 
       // set gray scale
       if(settings.gray){
-        grayscale = settings.grayScale*100+'%';
+        grayscale = `${settings.grayScale*100}%`;
 
         var styles = {
           'filter' : 'gray',
-          'filter': 'grayscale('+grayscale+')',
-          '-moz-filter': 'grayscale('+grayscale+')',
-          '-webkit-filter': 'grayscale('+grayscale+')'
+          'filter': `grayscale(${grayscale})`,
+          '-moz-filter': `grayscale(${grayscale})`,
+          '-webkit-filter': `grayscale(${grayscale})`
         };
         $('html').css(styles);
 
@@ -49,20 +49,7 @@
       if(settings.ribbon){
         $('.mourn-ribbon').remove();
         $('body').append(
-          '<div class="mourn-ribbon ' + settings.ribbonSize + '">'
-            + '<div class="ribbon-top"></div>'
-
-            + '<div class="ribbon-wing ribbon-left">'
-              + '<div class="ribbon-outside"><div class="ribbon-content"></div><div class="ribbon-bottom"></div></div>'
-              + '<div class="ribbon-inside"><div class="ribbon-content"></div><div class="ribbon-bottom"></div></div>'
-            + '</div>'
-
-            + '<div class="ribbon-wing ribbon-right">'
-              + '<div class="ribbon-outside"><div class="ribbon-content"></div><div class="ribbon-bottom"></div></div>'
-              + '<div class="ribbon-inside"><div class="ribbon-content"></div><div class="ribbon-bottom"></div></div>'
-            + '</div>'
-
-          + '</div>'
+          `<div class="mourn-ribbon ${settings.ribbonSize}"><div class="ribbon-top"></div><div class="ribbon-wing ribbon-left"><div class="ribbon-outside"><div class="ribbon-content"></div><div class="ribbon-bottom"></div></div><div class="ribbon-inside"><div class="ribbon-content"></div><div class="ribbon-bottom"></div></div></div><div class="ribbon-wing ribbon-right"><div class="ribbon-outside"><div class="ribbon-content"></div><div class="ribbon-bottom"></div></div><div class="ribbon-inside"><div class="ribbon-content"></div><div class="ribbon-bottom"></div></div></div></div>`
         );
 
         // set ribbon position
@@ -99,4 +86,4 @@
     switchSlider.on('change', function(){
       $.mourn({gray: $(this).is(':checked')});
     });
-}(jQuery));
+})(jQuery));
