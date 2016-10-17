@@ -1,6 +1,6 @@
 function checkGray(){
    if($('#gray-switch').is(":checked")){
-     $.mourn({gray:true});
+     $.mourn({gray:true,ribbonPosition:ribbonPosition});
    }else{
      $.mourn({gray:false});
    }
@@ -13,7 +13,8 @@ function checkGray(){
             ribbonPosition: 'top-right',
             gray: true,
             grayScale:0.9,            
-      }, options);      
+      }, options); 
+      ribbonPosition = settings.ribbonPosition;
       // set gray scale
       if(settings.gray){
         grayscale = settings.grayScale*100+'%';
