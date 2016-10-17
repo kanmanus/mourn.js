@@ -24,7 +24,7 @@
         };
         $('html').css(styles);
 
-        if(switchSlider.size() == 0){
+        if($('#gray-switch').size() == 0){
           $('body').append(
             '<div class="switch-container">'
               + '<div class="title">GRAYSCALE</div>'
