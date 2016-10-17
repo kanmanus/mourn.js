@@ -9,9 +9,15 @@
             ribbonSize: 'large',
             ribbonPosition: 'bottom-left',
             gray: true,
+<<<<<<< HEAD:src/js/mourn.js
             grayScale: 1.0
       }, options);
 
+=======
+            grayScale:0.9,            
+      }, options); 
+      ribbonPosition = settings.ribbonPosition;
+>>>>>>> d5130a5c9852222d98c7702af88834a31e91afe0:mourn.js
       // set gray scale
       if(settings.gray){
         grayscale = settings.grayScale*100+'%';
@@ -61,6 +67,7 @@
               + '<div class="ribbon-outside"><div class="ribbon-content"></div><div class="ribbon-bottom"></div></div>'
               + '<div class="ribbon-inside"><div class="ribbon-content"></div><div class="ribbon-bottom"></div></div>'
             + '</div>'
+<<<<<<< HEAD:src/js/mourn.js
           + '</div>'
         );
 
@@ -91,6 +98,38 @@
           };
         }
         $('.mourn-ribbon').css(styles);
+=======
+          );
+          if(settings.ribbonPosition=='top-right'){
+            // setting css
+            var styles = {
+              'position' : 'fixed',
+              'right': 0,
+              'top': 0
+            };
+            $('.mourn-ribbon').css(styles);
+          }else if(settings.ribbonPosition=='top-left'){
+            var styles = {
+              'position' : 'fixed',
+              'left': 0,
+              'top': 0
+            };
+          }else if(settings.ribbonPosition=='bottom-right'){
+            var styles = {
+              'position' : 'fixed',
+              'bottom': 0,
+              'right': 0
+            };
+          }else if(settings.ribbonPosition=='bottom-left'){
+            var styles = {
+              'position' : 'fixed',
+              'bottom': 0,
+              'left': 0
+            };
+          }
+          $('.mourn-ribbon').css(styles);
+        }          
+>>>>>>> d5130a5c9852222d98c7702af88834a31e91afe0:mourn.js
       }
   	};
 
