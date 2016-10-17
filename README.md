@@ -17,7 +17,7 @@ Files
 
 1. [Download the latest version](https://github.com/kanmanus/mourn.js/archive/master.zip)
 2. Clone the repo: git clone https://github.com/kanmanus/mourn.js.git
-3. Install with npm: npm install mourn.js
+3. Install with npm: ```npm install mourn.js```
 
 ## Demo
 
