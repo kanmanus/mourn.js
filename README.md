@@ -15,7 +15,7 @@ Files
 
 ## Demo
 
-[http://bxslider.com](try now!)
+[try now!](http://www.kanmanus.com/mournjs/example.html)
 
 ## Installation
 
