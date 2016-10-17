@@ -20,6 +20,7 @@ Several quick start options are available:
 * [Download the latest version](https://github.com/kanmanus/mourn.js/archive/master.zip)
 * Clone the repo: git clone https://github.com/kanmanus/mourn.js.git
 * Install with npm: ```npm install mourn.js```
+* Install with bower: ```bower install mourn.js```
 
 ## Demo
 
