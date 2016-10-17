@@ -22,13 +22,13 @@ Files
 ### Step 1: Link required files
 
 First, add a link to the css file in your ```<head>```:
-```
+```html
 <!-- Mourn.js CSS file -->
 <link rel="stylesheet" type="text/css" href="src/css/mourn.css">
 ```
 
 Then, before your closing ```<body>``` tag add:
-```
+```html
 <!-- jQuery library (served from Google) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <!-- Mourn.js Javascript file -->
@@ -38,7 +38,7 @@ Then, before your closing ```<body>``` tag add:
 ### Step 2: Call the Mourn.js
 
 With a simple call below, your web site will become to gray color mode and has a mourning ribbon on the page.
-```
+```javascript
 $(document).ready(function(){
   $.mourn();
 });
@@ -51,7 +51,7 @@ $(document).ready(function(){
 The Mourn.js has several properties that you can customize.
 Noted that the options you'll see below are default options of this library.
 
-```
+```javascript
 $.mourn({
   // Gray Color Mode Options
   gray: true,                      // boolean: [true|false]
