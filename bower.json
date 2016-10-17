@@ -14,7 +14,7 @@
         "package.json",
         "README.md"
     ],
-    "dependencies": {
+    "devDependencies": {
         "jquery": ">=2.2.4"
     }
 }
