@@ -1,5 +1,5 @@
 (function($) {
-    // Declare variables
+    // declare variables
     var switchSlider = $('#gray-switch');
 
     // Mourn.js
@@ -7,7 +7,7 @@
   		var settings = $.extend({
             ribbon: true,
             ribbonSize: 'large',
-            ribbonPosition: 'bottom-left',
+            ribbonPosition: 'top-right',
             gray: true,
             grayScale: 1.0
       }, options);
@@ -96,7 +96,7 @@
   	};
 
     // An event listener when the switch is toggled.
-    switchSlider.on('change', function(){
+    $('body').on('change', '#gray-switch', function(){
       $.mourn({gray: $(this).is(':checked')});
     });
 }(jQuery));
