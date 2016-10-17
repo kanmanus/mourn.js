@@ -7,7 +7,15 @@ body{
   height: 100%;
 }
 
-.content{
+h1{
+  margin: 0;
+}
+
+.description{
+  color: #666;
+}
+
+#content{
   padding: 20px;
   background: #2ecc71;
   color: #FFF;
@@ -21,10 +29,11 @@ footer{
   text-transform: uppercase;
 }
 
-#image-example{
-  background-image: url('assets/images/example.jpg');
-  background-size: cover;
-  background-position: center 15%;
+#example-image{
+  margin-top: 30px;
   width: 100%;
   height: 400px;
+  background-image: url('src/images/example.jpg');
+  background-size: cover;
+  background-position: center 15%;
 }
