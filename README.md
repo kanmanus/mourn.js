@@ -3,6 +3,8 @@
 Mourn.js is a jQuery library which is built in order to change any web site to gray color mode
 and also has an option to place the black ribbon in a page.
 
+![](example.gif)
+
 ## Version 0.0.16
 
 Files
