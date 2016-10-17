@@ -1,11 +1,6 @@
 $white: #FFF;
 $black: #000;
 
-body{
-  font-family: 'Source Sans', Arial, Helvetica, sans-serif;
-  font-size: 14px;
-}
-
 .mourn-ribbon{
   width: 80px;
   height: 124px;
@@ -15,8 +10,8 @@ body{
     top: 9px;
     left: 50%;
     transform: translate(-50%, 0);
-    width: 26px;
-    height: 20px;
+    width: 30px;
+    height: 14px;
     background: $black;
     border: 2px solid $white;
   }
@@ -27,13 +22,37 @@ body{
     left: 50%;
     width: 20px;
     height: 110px;
+    margin-left: 1px;
 
     &.ribbon-left{
+      margin-top: -1px;
       transform: translate(-50%, -50%) rotate(-24deg);
+
+      .ribbon-outside .ribbon-content,
+      .ribbon-inside .ribbon-content{
+        border-top-left-radius: 20px;
+      }
     }
 
     &.ribbon-right{
       transform: translate(-50%, -50%) rotate(24deg);
+
+      .ribbon-outside .ribbon-content,
+      .ribbon-inside .ribbon-content{
+        border-top-right-radius: 20px;
+      }
+
+      .ribbon-outside{
+        height: 112px;
+
+        .ribbon-content{
+          height: 92px;
+        }
+      }
+
+      .ribbon-inside{
+        top: 4px;
+      }
     }
 
     > div{
@@ -46,19 +65,35 @@ body{
     .ribbon-outside{
       top: 0;
       left: 0;
-      height: 100px;
-      border: 10px solid $white;
-      border-top: 0 solid;
-      border-bottom: 10px solid rgba(0, 0, 0, 0);
+      height: 111px;
+
+      .ribbon-content{
+        height: 91px;
+        background: $white;
+      }
+
+      .ribbon-bottom{
+        border: 8px solid $white;
+        border-top: 0 solid;
+        border-bottom: 10px solid rgba(0, 0, 0, 0);
+      }
     }
 
     .ribbon-inside{
-      top: 2px;
+      top: 3px;
       left: 2px;
-      height: 94px;
-      border: 8px solid $black;
-      border-top: 0 solid;
-      border-bottom: 10px solid rgba(0, 0, 0, 0);
+      height: 104px;
+
+      .ribbon-content{
+        height: 83px;
+        background: $black;
+      }
+
+      .ribbon-bottom{
+        border: 6px solid $black;
+        border-top: 0 solid;
+        border-bottom: 10px solid rgba(0, 0, 0, 0);
+      }
     }
   }
 

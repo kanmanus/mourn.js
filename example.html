@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Mourn.js - A jQuery library for making your web site </title>
+		<link rel="stylesheet" type="text/css" href="src/css/mourn.min.css">
+		<link rel="stylesheet" type="text/css" href="example.css">
+	</head>
+	<body>
+		<h1>Mourn.js</h1>
+
+		<div class="switch-container">
+			<div class="title">GRAYSCALE</div>
+
+			<!-- Rounded switch -->
+			<label class="switch">
+				<input type="checkbox" checked="checked" id="gray-switch">
+					<div class="slider round"></div>
+			</label>
+		</div>
+
+		<div style="background:#d6350c;color:#fff;padding:20px">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi dolorum optio consectetur esse nesciunt quos nisi odio officiis
+			distinctio atque aspernatur voluptas necessitatibus libero, labore quibusdam. Rem, maxime ea saepe.
+		</div>
+
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+		<script type="text/javascript" src="src/js/mourn.min.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				// Initial Mourn.js
+				$.mourn({ribbonPosition: 'bottom-left'});
+			});
+		</script>
+	</body>
+</html>

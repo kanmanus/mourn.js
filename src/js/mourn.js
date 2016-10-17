@@ -1,11 +1,15 @@
 (function($) {
+    // Declare variables
+    var switchSlider = $('#gray-switch');
+
+    // Mourn.js
     $.mourn = function(options) {
   		var settings = $.extend({
             ribbon: true,
             ribbonSize: 'large',
-            ribbonPosition: 'top-right',
+            ribbonPosition: 'bottom-left',
             gray: true,
-            grayscale:0.9
+            grayscale: 1.0
       }, options);
 
       // set gray scale
@@ -27,30 +31,33 @@
         };
         $('html').css(styles);
       }
+
+      // add a ribbon
       if(settings.ribbon){
+        $('.mourn-ribbon').remove();
         $('body').append(
           '<div class="mourn-ribbon ' + settings.ribbonSize + '">'
             + '<div class="ribbon-top"></div>'
 
             + '<div class="ribbon-wing ribbon-left">'
-              + '<div class="ribbon-outside"></div>'
-              + '<div class="ribbon-inside"></div>'
+              + '<div class="ribbon-outside"><div class="ribbon-content"></div><div class="ribbon-bottom"></div></div>'
+              + '<div class="ribbon-inside"><div class="ribbon-content"></div><div class="ribbon-bottom"></div></div>'
             + '</div>'
 
             + '<div class="ribbon-wing ribbon-right">'
-              + '<div class="ribbon-outside"></div>'
-              + '<div class="ribbon-inside"></div>'
+              + '<div class="ribbon-outside"><div class="ribbon-content"></div><div class="ribbon-bottom"></div></div>'
+              + '<div class="ribbon-inside"><div class="ribbon-content"></div><div class="ribbon-bottom"></div></div>'
             + '</div>'
           + '</div>'
-        );      
+        );
+
+        // set ribbon position
         if(settings.ribbonPosition=='top-right'){
-          // setting css
           var styles = {
             'position' : 'fixed',
             'right': 0,
             'top': 0
           };
-          $('.mourn-ribbon').css(styles);
         }else if(settings.ribbonPosition=='top-left'){
           var styles = {
             'position' : 'fixed',
@@ -73,4 +80,9 @@
         $('.mourn-ribbon').css(styles);
       }
   	};
+
+    // An event listener when the switch is toggled.
+    switchSlider.on('change', function(){
+      $.mourn({gray: $(this).is(':checked')});
+    });
 }(jQuery));
