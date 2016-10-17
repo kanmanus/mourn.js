@@ -1,6 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700');
 
 body{
-  font-family: 'Source Sans', Arial, Helvetica, sans-serif;
-  font-size: 14px;
+  margin: 20px;
+  font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+.content{
+  padding: 20px;
+  background: #d6350c;
+  color: #FFF;
+}
+
+footer{
+  padding: 20px 0;
+  font-size: 12px;
+  color: #999;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
 }

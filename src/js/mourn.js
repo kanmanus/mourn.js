@@ -9,12 +9,13 @@
             ribbonSize: 'large',
             ribbonPosition: 'bottom-left',
             gray: true,
-            grayscale: 1.0
+            grayScale: 1.0
       }, options);
 
       // set gray scale
       if(settings.gray){
-        grayscale = settings.grayscale*100+'%';
+        grayscale = settings.grayScale*100+'%';
+
         var styles = {
           'filter' : 'gray',
           'filter': 'grayscale('+grayscale+')',
@@ -22,6 +23,18 @@
           '-webkit-filter': 'grayscale('+grayscale+')'
         };
         $('html').css(styles);
+
+        if(switchSlider.size() == 0){
+          $('body').append(
+            '<div class="switch-container">'
+              + '<div class="title">GRAYSCALE</div>'
+              + '<label class="switch">'
+                + '<input type="checkbox" onChange="checkGray()" checked="checked" id="gray-switch">'
+                + '<div class="slider round"></div>'
+              + '</label>'
+            + '</div>'
+          );
+        }
       }else{
         var styles = {
           'filter' : 'initial',
