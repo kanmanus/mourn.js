@@ -1,6 +1,6 @@
 function checkGray(){
    if($('#gray-switch').is(":checked")){
-     $.mourn({gray:true,ribbonPosition:ribbonPosition});
+     $.mourn({gray:true});
    }else{
      $.mourn({gray:false});
    }
@@ -59,36 +59,36 @@ function checkGray(){
                 + '<div class="ribbon-inside"></div>'
               + '</div>'
             + '</div>'
-          );    
-        }  
-        if(settings.ribbonPosition=='top-right'){
-          // setting css
-          var styles = {
-            'position' : 'fixed',
-            'right': 0,
-            'top': 0
-          };
+          );
+          if(settings.ribbonPosition=='top-right'){
+            // setting css
+            var styles = {
+              'position' : 'fixed',
+              'right': 0,
+              'top': 0
+            };
+            $('.mourn-ribbon').css(styles);
+          }else if(settings.ribbonPosition=='top-left'){
+            var styles = {
+              'position' : 'fixed',
+              'left': 0,
+              'top': 0
+            };
+          }else if(settings.ribbonPosition=='bottom-right'){
+            var styles = {
+              'position' : 'fixed',
+              'bottom': 0,
+              'right': 0
+            };
+          }else if(settings.ribbonPosition=='bottom-left'){
+            var styles = {
+              'position' : 'fixed',
+              'bottom': 0,
+              'left': 0
+            };
+          }
           $('.mourn-ribbon').css(styles);
-        }else if(settings.ribbonPosition=='top-left'){
-          var styles = {
-            'position' : 'fixed',
-            'left': 0,
-            'top': 0
-          };
-        }else if(settings.ribbonPosition=='bottom-right'){
-          var styles = {
-            'position' : 'fixed',
-            'bottom': 0,
-            'right': 0
-          };
-        }else if(settings.ribbonPosition=='bottom-left'){
-          var styles = {
-            'position' : 'fixed',
-            'bottom': 0,
-            'left': 0
-          };
-        }
-        $('.mourn-ribbon').css(styles);
+        }          
       }
   	};
 }(jQuery));
