@@ -8,12 +8,6 @@ File
 * index.html
 * mourn.js
 * mourn.css
-* mourn.min.css
-* mourn-button.css
-* mourn-button.min.css
-* ribbon.css
-* ribbon.min.css
-
 ========================================================================================
 
 Copyright (C) 2016 Kanmanus Ongvisatepaiboon, Songklod Saengvoratip, Phruek Kosonsuwiwat
