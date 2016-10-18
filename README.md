@@ -76,6 +76,10 @@ $.mourn({
 });
 ```
 
+## Supported Browsers
+
+mourn.js is designed to support the latest web browser. We support the current versions of Chrome, Firefox and Safari
+
 ========================================================================================
 
 Copyright (C) 2016 | Developed by Kanmanus Ongvisatepaiboon, Songklod Saengvoratip, Phruek Kosonsuwiwat.
