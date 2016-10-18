@@ -78,7 +78,7 @@ $.mourn({
 
 ## Supported Browsers
 
-mourn.js is designed to support the latest web browser. We support the current versions of Chrome, Firefox and Safari
+The Mourn.js is designed to support the latest web browser. We support the current versions of Chrome, Firefox and Safari
 
 ========================================================================================
 
